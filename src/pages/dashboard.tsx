@@ -87,7 +87,7 @@ const Dashboard: React.FC = () => {
 
                 <div>
                   <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 flex items-center gap-2">
-                    Vehicle Inspection Expert
+                    Engine Inspection 
                   </h1>
                   <div className="flex items-center gap-2 mt-1">
                     <FiActivity className="w-4 h-4 text-blue-600" />

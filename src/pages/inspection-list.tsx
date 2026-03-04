@@ -526,8 +526,8 @@ const InspectionList: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-4">
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">Inspections for VIN</h1>
-                <p className="text-sm text-gray-600">VIN: {vin}</p>
+                <h1 className="text-2xl font-bold text-gray-900">Inspections for Engine</h1>
+                <p className="text-sm text-gray-600">Engin No: {vin}</p>
               </div>
               <Button onClick={handleBackToDashboard} variant="secondary">
                 Back to Dashboard
@@ -563,8 +563,8 @@ const InspectionList: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-4">
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">Inspections for VIN</h1>
-                <p className="text-sm text-gray-600">VIN: {vin}</p>
+                <h1 className="text-2xl font-bold text-gray-900">Inspections for Engine No</h1>
+                <p className="text-sm text-gray-600">Engine No: {vin}</p>
               </div>
               <Button onClick={handleBackToDashboard} variant="secondary">
                 Back to Dashboard
@@ -587,7 +587,7 @@ const InspectionList: React.FC = () => {
                 <p className="text-gray-600">
                   {searchTerm
                     ? `No inspections match "${searchTerm}". Try a different keyword.`
-                    : `There are currently no active issues for VIN ${vin}.`}
+                    : `There are currently no active issues for Engine No ${vin}.`}
                 </p>
                 {searchTerm && (
                   <Button
@@ -663,7 +663,7 @@ const InspectionList: React.FC = () => {
               <div className="flex flex-wrap items-center gap-2">
                 {/* VIN Badge */}
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-900 rounded-lg border-2 border-indigo-200 shadow-sm">
-                  <span className="text-xs font-medium">🚗 VIN:</span>
+                  <span className="text-xs font-medium">🚗 Engine No:</span>
                   <span className="text-sm font-bold">{vin}</span>
                 </div>
 
@@ -1321,10 +1321,10 @@ const InspectionList: React.FC = () => {
 
                 <div>
                   <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 flex items-center gap-2">
-                    Inspections for VIN
+                    Inspections for Engine
                   </h1>
                   <p className="text-sm text-gray-500 mt-0.5">
-                    View all issues for this vehicle
+                    View all issues for this engine
                   </p>
                 </div>
               </div>
@@ -1345,7 +1345,7 @@ const InspectionList: React.FC = () => {
             <div className="flex flex-wrap items-center gap-2">
               {/* VIN Badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-900 rounded-lg border-2 border-indigo-200 shadow-sm">
-                <span className="text-xs font-medium">🚗 VIN:</span>
+                <span className="text-xs font-medium">🚗 Engine No:</span>
                 <span className="text-sm font-bold">{vin}</span>
               </div>
 

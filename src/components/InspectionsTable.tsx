@@ -243,7 +243,7 @@ const InspectionsTable: React.FC<InspectionsTableProps> = ({
         <thead className="bg-gray-50">
           <tr>
             <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-              VIN
+              Engine No. 
             </th>
             <th className="px-6 py-4 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
               Status
@@ -308,7 +308,7 @@ const InspectionsTable: React.FC<InspectionsTableProps> = ({
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-1">
-              Vehicle Inspections
+              Engine Inspections
             </h2>
             <p className="text-sm text-gray-600">
               {filteredInspections.length} {filteredInspections.length === 1 ? 'inspection' : 'inspections'}
@@ -358,7 +358,7 @@ const InspectionsTable: React.FC<InspectionsTableProps> = ({
               </div>
               <input
                 type="text"
-                placeholder="Search by VIN..."
+                placeholder="Search by Engine No...."
                 value={searchTerm}
                 onChange={handleSearchChange}
                 className="block w-full sm:w-64 pl-10 pr-10 py-2.5 border border-gray-300 rounded-lg bg-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
