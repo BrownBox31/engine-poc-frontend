@@ -273,7 +273,7 @@ export default function EngineRecorder() {
         type: "audio/wav",
       });
       await createInspection({
-        engineNoNumber: engineId,
+        vinNumber: engineId,
         workstationId: 1,
         descriptionAudio: file,
         view: "ALL",

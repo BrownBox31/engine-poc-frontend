@@ -478,14 +478,14 @@ export const fetchPVInspectionByVin = async (
 // };
 
 export const createInspection = async (params: {
-  engineNoNumber: string;
+  vinNumber: string;
   workstationId: number;
   descriptionAudio: File;
   view: string;
 }) => {
   const formData = new FormData();
 
-  formData.append("engineNoNumber", params.engineNoNumber);
+  formData.append("vinNumber", params.vinNumber);
   formData.append("workstationId", String(params.workstationId));
   formData.append("view", params.view);
   formData.append("descriptionAudio", params.descriptionAudio);
