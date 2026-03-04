@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, type MutableRefObject } from "react";
 import { createInspection } from "../features/inspections/services/inspection_services";
 import { FiBarChart2, FiLogOut } from "react-icons/fi";
 import { navigationUtils } from "../services/routes/constants";
+import { useNavigate } from "react-router-dom";
 
 /* ─────────────────────────────── TYPES ─────────────────────────────── */
 
@@ -211,6 +212,7 @@ function SuccessBanner({ engineId, onReset }: { engineId: string; onReset: () =>
 type UploadStatus = "idle" | "uploading" | "success" | "error";
 
 export default function EngineRecorder() {
+    const navigate = useNavigate();
   const [engineId, setEngineId] = useState("");
   const [isRecording, setIsRecording] = useState(false);
   const [recordingTime, setRecordingTime] = useState(0);
@@ -320,7 +322,13 @@ export default function EngineRecorder() {
 
               {/* Right Side - Action Buttons */}
               <div className="flex items-center gap-3">
-
+                <button
+                  onClick={() => navigate('/dashboard')}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all font-medium shadow-md hover:shadow-lg"
+                >
+                  <FiBarChart2 className="w-4 h-4" />
+                  <span>Dashboard</span>
+                </button>
                 <button
                   onClick={handleLogout}
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-all font-medium shadow-sm"

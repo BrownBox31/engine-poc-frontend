@@ -56,6 +56,14 @@ const AppRouter: React.FC = () => {
             </ProtectedRoute>
           }
         />
+         <Route
+          path={ROUTES.DASHBOARD}
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
 
         <Route
           path={ROUTES.ANALYTICS}

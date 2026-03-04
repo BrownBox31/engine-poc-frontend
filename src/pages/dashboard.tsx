@@ -7,6 +7,7 @@ import apiService from '../services/data/api_service_class';
 import { ApiEndpoints } from '../services/data/apis';
 import type { VehicleInspection, InspectionListResponse } from '../interfaces/inspection';
 import { FiActivity, FiBarChart2, FiLogOut } from 'react-icons/fi';
+import { BiUserVoice } from 'react-icons/bi';
 
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
@@ -99,6 +100,13 @@ const Dashboard: React.FC = () => {
 
               {/* Right Side - Action Buttons */}
               <div className="flex items-center gap-3">
+                    <button
+                  onClick={() => navigate('/EngineInspector')}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all font-medium shadow-md hover:shadow-lg"
+                >
+                  <BiUserVoice className="w-4 h-4" />
+                  <span>Record Inspection</span>
+                </button>
                 <button
                   onClick={() => navigate('/analytics')}
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all font-medium shadow-md hover:shadow-lg"
